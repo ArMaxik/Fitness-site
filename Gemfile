@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Bootstrap
 gem 'bootstrap'
 gem 'jquery-rails'
+gem "bootstrap_form", ">= 4.0.0"
 
 # Devise
 gem 'devise'

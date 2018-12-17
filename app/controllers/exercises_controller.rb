@@ -1,5 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
+  # TODO: add faded alerts
 
   # GET /exercises
   # GET /exercises.json

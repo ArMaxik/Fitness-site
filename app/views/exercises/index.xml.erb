@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<exercises>
+  <% @exercises.each do |exer| %>
+    <exercise id="<%= exer.id %>">
+      <title><%= exer.title %></title>
+      <description><%= exer.description%></description>
+    </exercise>
+  <% end %>
+</exercises>

@@ -4,12 +4,13 @@
     <title>Trainer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= tag :meta, name: :psj, action: action_name, controller: controller_name %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-light">
     <header class="masthead mb-auto">
       <%= render 'layouts/header' %>
     </header>
