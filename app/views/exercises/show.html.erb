@@ -7,3 +7,7 @@
     <p class="card-text"> <%= @exercise.description %></p>
   </div>
 </div>
+<h1><%= @exercise.comments.count %> comments</h1>
+<div>
+  <%= render 'comments/form' %>
+</div>
