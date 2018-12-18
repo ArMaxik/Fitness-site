@@ -9,5 +9,8 @@
 </div>
 <h1><%= @exercise.comments.count %> comments</h1>
 <div>
+  <%= render @exercise.comments %>
+</div>
+<div>
   <%= render 'comments/form' %>
 </div>
