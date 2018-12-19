@@ -1,6 +1,9 @@
 <div class="card">
   <div class="card-body">
     <p class="card-text"><%= comment.comment %></p>
-    <p><%= distance_of_time_in_words_to_now comment.created_at %></p>
+    <div class="card-footer text-muted">
+      <%= distance_of_time_in_words_to_now comment.created_at %>
+    </div>
   </div>
 </div>
+<a href="#">Answer</a>

@@ -4,13 +4,11 @@
     <%= @exercise.title %>
   </div>
   <div class="card-body">
-    <p class="card-text"> <%= @exercise.description %></p>
+    <p class="card-text"><%= @exercise.description %></p>
   </div>
 </div>
 <h1><%= @exercise.comments.count %> comments</h1>
-<div>
-  <%= render @exercise.comments %>
-</div>
+<%= render @exercise.comments %>
 <div>
   <%= render 'comments/form' %>
 </div>
