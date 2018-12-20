@@ -6,16 +6,19 @@
   </xsl:template>
 
   <xsl:template match="exercise">
-      <div class="card">
-        <h5 class="card-header"><xsl:value-of select="title"/></h5>
-        <div class="card-body">
-          <p class="card-text"><xsl:value-of select="description"/></p>
-        </div>
-        <div class="card-footer">
-          <a href="/exercises/{@id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
-            Show me
-          </a>
-        </div>
+    <div class="card">
+      <h5 class="card-header"><xsl:value-of select="title"/></h5>
+      <div class="card-body">
+        <p class="card-text"><xsl:value-of select="description"/></p>
       </div>
+      <div class="card-footer">
+        <a href="/exercises/{@id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+          Show me
+        </a>
+        <button type="button" class="btn btn-success rating_up" post_id="{@id}">+</button>
+        <span class="rating" post_id="{@id}"><xsl:value-of select="rating"/></span>
+        <button type="button" class="btn btn-danger rating_down" post_id="{@id}">-</button>
+      </div>
+    </div>
   </xsl:template>
 </xsl:stylesheet>

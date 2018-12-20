@@ -22,6 +22,13 @@ class ExercisesController < ApplicationController
   def edit
   end
 
+  def change_rating
+
+  end
+
+  def feed
+  end
+
   # POST /exercises
   # POST /exercises.json
   def create
