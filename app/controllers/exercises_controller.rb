@@ -1,5 +1,6 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token, :only => [:change_rating]
   # TODO: add faded alerts
 
   # GET /exercises
@@ -23,7 +24,16 @@ class ExercisesController < ApplicationController
   end
 
   def change_rating
-
+    exer = Exercise.find_by(id: params[:exercise_id])
+    if params[:change] == 'up'
+      exer.rating += 1
+    elsif params[:change] == 'down'
+      exer.rating -= 1
+    end
+    exer.save
+    respond_to do |format|
+      format.json { render json: exer.rating }
+    end
   end
 
   def feed

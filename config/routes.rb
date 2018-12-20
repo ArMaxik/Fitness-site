@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :exercises do
     resources :comments
+    post 'change_rating'
   end
   get 'feed', to: 'exercises#feed'
   root 'exercises#feed'

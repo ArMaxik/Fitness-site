@@ -19,5 +19,13 @@ displayResult = (xml, xsl) ->
 rating_up_btn_init = () ->
   $ '.rating_up'
     .on 'click', () ->
-      console.log 'Does it work?!'
-      console.log this.post_id
+      post_id = $(this).attr('post_id')
+      $.post "/exercises/#{post_id}/change_rating", {change: 'up'}, (new_rating) ->
+        $ "[post_id='#{post_id}'].rating"
+          .text("#{new_rating}")
+  $ '.rating_down'
+    .on 'click', () ->
+      post_id = $(this).attr('post_id')
+      $.post "/exercises/#{post_id}/change_rating", {change: 'down'}, (new_rating) ->
+        $ "[post_id='#{post_id}'].rating"
+          .text("#{new_rating}")
