@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_exercise, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token, :only => [:change_rating]
   # TODO: add faded alerts

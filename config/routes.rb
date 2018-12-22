@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :exercises do
     resources :comments
     post 'change_rating'
