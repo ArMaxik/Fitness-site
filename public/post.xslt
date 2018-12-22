@@ -15,9 +15,25 @@
         <a href="/exercises/{@id}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
           Show me
         </a>
-        <button type="button" class="btn btn-success rating_up" post_id="{@id}">+</button>
+        <xsl:element name="button">
+          <xsl:attribute name="type">button</xsl:attribute>
+          <xsl:attribute name="class">btn btn-success rating_up</xsl:attribute>
+          <xsl:attribute name="post_id"><xsl:value-of select="id"/></xsl:attribute>
+          <xsl:if test="user_vote = 1">
+            <xsl:attribute name="disabled"></xsl:attribute>
+          </xsl:if>
+          +
+        </xsl:element>
         <span class="rating" post_id="{@id}"><xsl:value-of select="rating"/></span>
-        <button type="button" class="btn btn-danger rating_down" post_id="{@id}">-</button>
+        <xsl:element name="button">
+          <xsl:attribute name="type">button</xsl:attribute>
+          <xsl:attribute name="class">btn btn-danger rating_down</xsl:attribute>
+          <xsl:attribute name="post_id"><xsl:value-of select="id"/></xsl:attribute>
+          <xsl:if test="user_vote = -1">
+            <xsl:attribute name="disabled"></xsl:attribute>
+          </xsl:if>
+          -
+        </xsl:element>
         <span><xsl:value-of select="user_name"/></span>
       </div>
     </div>

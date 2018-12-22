@@ -26,14 +26,20 @@ class ExercisesController < ApplicationController
 
   def change_rating
     exer = Exercise.find_by(id: params[:exercise_id])
-    if params[:change] == 'up'
+    unless record = VoteTable.find_by(user_id:current_user.id, exercise_id: params[:exercise_id])
+      record = VoteTable.create({user_id:current_user.id, exercise_id: params[:exercise_id]})
+    end
+    if record.vote < 1 and params[:change] == 'up'
       exer.rating += 1
-    elsif params[:change] == 'down'
+      record.vote += 1
+    elsif record.vote > -1 and params[:change] == 'down'
       exer.rating -= 1
+      record.vote -= 1
     end
     exer.save
+    record.save
     respond_to do |format|
-      format.json { render json: exer.rating }
+      format.json { render json: { rating: exer.rating, vote: record.vote } }
     end
   end
 
