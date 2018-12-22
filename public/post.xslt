@@ -18,6 +18,7 @@
         <button type="button" class="btn btn-success rating_up" post_id="{@id}">+</button>
         <span class="rating" post_id="{@id}"><xsl:value-of select="rating"/></span>
         <button type="button" class="btn btn-danger rating_down" post_id="{@id}">-</button>
+        <span><xsl:value-of select="user_name"/></span>
       </div>
     </div>
   </xsl:template>

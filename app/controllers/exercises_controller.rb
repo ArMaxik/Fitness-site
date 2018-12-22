@@ -43,7 +43,9 @@ class ExercisesController < ApplicationController
   # POST /exercises
   # POST /exercises.json
   def create
-    @exercise = Exercise.new(exercise_params)
+    modify_exercise_params = exercise_params
+    modify_exercise_params[:user_id] = current_user.id
+    @exercise = Exercise.new(modify_exercise_params)
 
     respond_to do |format|
       if @exercise.save

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <exercises>
   <% @exercises.each do |exer| %>
-    <exercise id="<%= exer.id %>">
+    <exercise id="<%= exer.id %>" user_id="<%= exer.user_id %>">
       <title><%= exer.title %></title>
       <description><%= exer.description%></description>
       <rating><%= exer.rating %></rating>
+      <user_name><%= exer.user.username %></user_name>
     </exercise>
   <% end %>
 </exercises>
