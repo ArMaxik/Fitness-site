@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     post 'change_rating'
   end
   get 'users/:id', to: 'users#show', as: 'user'
+  get 'users/:id/exercises', to: 'users#exercises'
   get 'feed', to: 'exercises#feed'
   root 'exercises#feed'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

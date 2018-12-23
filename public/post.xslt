@@ -7,8 +7,8 @@
 
   <xsl:template match="exercise">
     <div class="card">
-      <h5 class="card-header"><xsl:value-of select="title"/></h5>
       <div class="card-body">
+        <h3 class="card-title"><xsl:value-of select="title"/></h3>
         <p class="card-text"><xsl:value-of select="description"/></p>
       </div>
       <div class="card-footer">

@@ -11,26 +11,34 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Russo+One');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .navbar-custom {
   background-color: #5295ff;
   padding: 0;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
   color: rgb(255,255,255);
-  padding: 0.8rem 1rem;
+  padding: 0.4rem 1rem 0.3rem;
 }
 /* change the link color and add padding for height */
 .navbar-custom .navbar-nav .nav-link {
-  color: rgb(255,255,255);
+  color: rgb(196, 214, 223);
   padding: 1rem 1rem;
 }
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-  color: #ffffff;
-  background-color: #466dcb; /* add background-color to active links */
+  color: rgb(255, 255, 255);
 }

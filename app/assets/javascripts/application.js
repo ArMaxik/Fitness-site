@@ -17,3 +17,9 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+$(document).on('turbolinks:load', function() {
+    $(".nav .nav-link").on("click", function(){
+        $(".nav").find(".active").removeClass("active");
+        $(this).addClass("active");
+    });
+});
