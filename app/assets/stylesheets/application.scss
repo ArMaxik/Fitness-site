@@ -26,6 +26,11 @@ body {
   text-transform: uppercase;
   font-family: 'Russo One', sans-serif;
 }
+.rating {
+  font-family: 'Russo One', sans-serif;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
@@ -41,4 +46,15 @@ body {
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
   color: rgb(255, 255, 255);
+}
+
+.rating_down, .rating_up {
+  width: 38px;
+  height: 38px;
+}
+.flags {
+  margin-top: 10px;
+}
+.flags img {
+  box-shadow: 0 0 5px black;
 }

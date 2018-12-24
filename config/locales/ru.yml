@@ -1,0 +1,17 @@
+ru:
+  Feed: "Новости"
+  Saves: "Сохраненное"
+  Logout: "Выйти"
+  Login: "Войти"
+  Hello: "Привет"
+  My_profile: "Мой профиль"
+  New_exercise: "Новое упражнение"
+  User_settings: "Настройки пользователя"
+
+  exercises:
+    show:
+      Total_comments: "Всего комментариев"
+  comments:
+    form:
+      Leave_comment: "Оставить комментарий"
+      Your_comment: "Ваш комментарий"

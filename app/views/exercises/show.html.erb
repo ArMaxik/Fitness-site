@@ -7,7 +7,7 @@
     <p class="card-text"><%= @exercise.description %></p>
   </div>
 </div>
-<h1><%= @exercise.comments.count %> comments</h1>
+<h1><%= t '.Total_comments' %>: <%= @exercise.comments.count %></h1>
 <%= render @exercise.comments %>
 <div>
   <%= render 'comments/form' %>

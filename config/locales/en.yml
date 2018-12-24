@@ -30,4 +30,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  Feed: "Feed"
+  Saves: "Saves"
+  Logout: "Logout"
+  Login: "Login"
+  Hello: "Hello"
+  My_profile: "My profile"
+  New_exercise: "New exercise"
+  User_settings: "User settings"
+
+  exercises:
+    show:
+      Total_comments: "Total comments"
+  comments:
+    form:
+      Leave_comment: "Leave comment"
+      Your_comment: "Your comment"

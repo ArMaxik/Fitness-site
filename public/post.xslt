@@ -17,7 +17,7 @@
         </a>
         <xsl:element name="button">
           <xsl:attribute name="type">button</xsl:attribute>
-          <xsl:attribute name="class">btn btn-success rating_up</xsl:attribute>
+          <xsl:attribute name="class">btn btn-success rating_up rounded-circle</xsl:attribute>
           <xsl:attribute name="post_id"><xsl:value-of select="id"/></xsl:attribute>
           <xsl:if test="user_vote = 1">
             <xsl:attribute name="disabled"></xsl:attribute>
@@ -27,7 +27,7 @@
         <span class="rating" post_id="{@id}"><xsl:value-of select="rating"/></span>
         <xsl:element name="button">
           <xsl:attribute name="type">button</xsl:attribute>
-          <xsl:attribute name="class">btn btn-danger rating_down</xsl:attribute>
+          <xsl:attribute name="class">btn btn-danger rating_down rounded-circle</xsl:attribute>
           <xsl:attribute name="post_id"><xsl:value-of select="id"/></xsl:attribute>
           <xsl:if test="user_vote = -1">
             <xsl:attribute name="disabled"></xsl:attribute>
@@ -36,7 +36,7 @@
         </xsl:element>
         <a href="/users/{@user_id}"><xsl:value-of select="user_name"/></a>
         <xsl:if test="status=0">
-          <button type="button" class="btn btn-primary post_save" post_id="{@id}">Save</button>
+          <button type="button" class="btn btn-primary post_save " post_id="{@id}">Save</button>
         </xsl:if>
         <xsl:if test="status=1">
           <button type="button" class="btn btn-success post_save" post_id="{@id}">Saved</button>

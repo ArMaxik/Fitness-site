@@ -1,8 +1,17 @@
 <div>
-  <h2>Hello, <%= current_user.username %>!</h2>
+  <h2><%= t(:Hello) %>, <%= current_user.username %>!</h2>
   <a href="<%= user_path(current_user.id) %>" class="btn btn-primary btn-lg active" role="button"
-     aria-pressed="true">My
-    profile</a>
+     aria-pressed="true"><%= t(:My_profile) %></a>
+  <%= link_to t(:User_settings), edit_user_registration_path, class: "nav-link" %>
+  <a href="<%= new_exercise_path %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">
+    <%= t(:New_exercise) %>
+  </a>
+  <div class="flags">
+    <a href="<%= current_path(locale: 'ru') %>">
+      <%= image_tag 'ru.jpg', size: '54x36' %>
+    </a>
+    <a href="<%= current_path(locale: 'en') %>">
+      <%= image_tag 'en.jpg', size: '54x36' %>
+    </a>
+  </div>
 </div>
-<a href="<%= new_exercise_path %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">New
-  exercises</a>
