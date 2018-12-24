@@ -24,6 +24,10 @@ class ExercisesController < ApplicationController
   def edit
   end
 
+  def saves
+
+  end
+
   def change_rating
     exer = Exercise.find_by(id: params[:exercise_id])
     unless record = VoteTable.find_by(user_id:current_user.id, exercise_id: params[:exercise_id])

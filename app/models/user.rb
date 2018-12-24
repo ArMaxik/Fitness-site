@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :exercises, dependent: :destroy
   has_many :comments
+
+  has_and_belongs_to_many :exercises_save, class_name: 'Exercise'
+  #has_many :saves
+  #has_many :exercises, through: :save
 end

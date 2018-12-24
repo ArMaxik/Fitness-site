@@ -8,6 +8,11 @@
       <user_name><%= exer.user.username %></user_name>
       <% rec = VoteTable.find_by(user_id:current_user.id, exercise_id: exer.id) %>
       <user_vote><%= rec ? rec.vote : 0 %></user_vote>
+      <% if current_user.exercises_save.exists?(exer.id) %>
+      <status>1</status>
+      <% else %>
+      <status>0</status>
+      <% end %>
     </exercise>
   <% end %>
 </exercises>

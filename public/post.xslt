@@ -34,7 +34,13 @@
           </xsl:if>
           -
         </xsl:element>
-        <span><xsl:value-of select="user_name"/></span>
+        <a href="/users/{@user_id}"><xsl:value-of select="user_name"/></a>
+        <xsl:if test="status=0">
+          <button type="button" class="btn btn-primary post_save" post_id="{@id}">Save</button>
+        </xsl:if>
+        <xsl:if test="status=1">
+          <button type="button" class="btn btn-success post_save" post_id="{@id}">Saved</button>
+        </xsl:if>
       </div>
     </div>
   </xsl:template>
