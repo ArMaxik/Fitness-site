@@ -1,4 +1,10 @@
 <exercises>
+  <words>
+    <comments><%= t(:Comments) %></comments>
+    <save><%= t(:Save) %></save>
+    <saved><%= t(:Saved) %></saved>
+    <author><%= t(:Author) %></author>
+  </words>
   <% exercises.each do |exer| %>
     <exercise id="<%= exer.id %>" user_id="<%= exer.user_id %>">
       <id><%= exer.id %></id>

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :exercises]
   def show
   end
@@ -15,12 +16,14 @@ class UsersController < ApplicationController
     if current_user.exercises_save.exists?(params[:post_id].to_i)
       current_user.exercises_save.destroy current_user.exercises_save.find params[:post_id].to_i
       state = 'unsaved'
+      translate = t(:Save)
     else
       current_user.exercises_save << Exercise.find_by(id: params[:post_id].to_i)
       state = 'saved'
+      translate = t(:Saved)
     end
     respond_to do |format|
-      format.json { render json: {state: state} }
+      format.json { render json: {state: state, translate: translate} }
     end
   end
 

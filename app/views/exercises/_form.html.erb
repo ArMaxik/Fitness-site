@@ -1,5 +1,5 @@
 <%= bootstrap_form_for(exercise) do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :description %>
-  <%= f.submit "Create new post" %>
+  <%= f.text_field :title, label: t(:Title) %>
+  <%= f.text_area :description, label: t(:Description) %>
+  <%= f.submit t(:Create_new) %>
 <% end %>

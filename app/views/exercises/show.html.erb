@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div class="card">
-  <div class="card-header">
-    <%= @exercise.title %>
-  </div>
   <div class="card-body">
+    <h4 class="card-title"><%= @exercise.title %></h4>
     <p class="card-text"><%= @exercise.description %></p>
+  </div>
+  <div class="card-footer text-muted">
+    <%= t(:Added_by) %>
+    <%= @exercise.user.username %>
+    <%= distance_of_time_in_words_to_now @exercise.created_at %>
+    <%= t(:Ago) %>
   </div>
 </div>
 <h1><%= t '.Total_comments' %>: <%= @exercise.comments.count %></h1>

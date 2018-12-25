@@ -38,6 +38,35 @@ en:
   My_profile: "My profile"
   New_exercise: "New exercise"
   User_settings: "User settings"
+  Comments: "Comments"
+  Save: "Save"
+  Saved: "Saved"
+  Author: "Posted by"
+  Account_of: "Account of"
+  Added_by: "Added by"
+  Ago: "Ago"
+  Top: "Top"
+
+  Edit_Profile: "Edit Profile"
+  Password: "Password (leave blank if you don't want to change it)"
+  Current_password: "Current password (we need your current password to confirm your changes)"
+  Password_confirmation: "Password confirmation"
+  Characters_minimum: "characters minimum"
+  Email: "Email"
+  Update: "Update"
+  Cancel_my_account: "Cancel my account"
+
+  Title: "Title"
+  Description: "Description"
+  Create_new: "Create new exercise"
+
+  Register: "Sign up"
+  Password_L: "Password"
+  Waiting: "Currently waiting confirmation for: "
+  Remember: "Remember"
+  Pls_use: "Password can't be shoter than"
+  Symb: "symbols"
+  NickName: "Name"
 
   exercises:
     show:

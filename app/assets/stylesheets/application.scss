@@ -18,8 +18,16 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 100;
+  margin: 90px ;
 }
 footer {
+  flex-grow: 1;
   font-family: 'Russo One', sans-serif;
   color: rgb(196, 214, 223);
   margin-top: 10px;
@@ -66,6 +74,22 @@ footer {
 .flags {
   margin-top: 10px;
 }
-.flags img {
+.flags img, .flag img{
   box-shadow: 0 0 5px black;
+}
+.flag {
+  margin-right: 15px;
+  margin-top: 30px;
+}
+.card-footer > * > * {
+  margin-right: 20px;
+}
+.post_box {
+  margin-top: 20px;
+}
+.comment_box {
+  margin-top: 20px;
+}
+.user_btns {
+  width: 95%;
 }

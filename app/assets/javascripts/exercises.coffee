@@ -15,3 +15,9 @@ $ document
           displayResult resp_xml, resp_xsl
           rating_up_btn_init()
           init_save_btn()
+    else if page.controller() == 'exercises' && page.action() == 'top'
+      $.get '/index_top.xml', {}, (resp_xml) ->
+        $.get '/post.xslt', {}, (resp_xsl) ->
+          displayResult resp_xml, resp_xsl
+          rating_up_btn_init()
+          init_save_btn()

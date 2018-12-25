@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-25T00:12:55+03:00">2018-12-25T00:12:55+03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-25T03:34:26+03:00">2018-12-25T03:34:26+03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.62%</span></span>
+    (<span class="covered_percent"><span class="green">92.56%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.01
+         1.02
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>244</b> relevant lines. 
-    <span class="green"><b>226</b> lines covered</span> and
+    <b>242</b> relevant lines. 
+    <span class="green"><b>224</b> lines covered</span> and
     <span class="red"><b>18</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -283,9 +283,9 @@
       <tr>
         <td class="strong"><a href="#4d2b86fc2eff750d3c86422cb68ddd343b0c1f6d" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>12</td>
-        <td>12</td>
+        <td>17</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -362,10 +362,10 @@
       
       <tr>
         <td class="strong"><a href="#d730cfa9e9c86b22e463ad2a60316f73007d618f" class="src_link" title="spec/selenium_spec.rb">spec/selenium_spec.rb</a></td>
-        <td class="yellow strong">80.52 %</td>
-        <td>99</td>
-        <td>77</td>
-        <td>62</td>
+        <td class="red strong">79.45 %</td>
+        <td>95</td>
+        <td>73</td>
+        <td>58</td>
         <td>15</td>
         <td>0.8</td>
       </tr>
@@ -3868,8 +3868,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3946,22 +3946,34 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &#39;saves&#39;, to: &#39;exercises#saves&#39;, as: &#39;saves&#39;</code>
+          <code class="ruby">  get &#39;top&#39;, to: &#39;exercises#top&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
+          <code class="ruby">  get &#39;index_top&#39;, to: &#39;exercises#index_top&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &#39;saves&#39;, to: &#39;exercises#saves&#39;, as: &#39;saves&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
           <code class="ruby">  root &#39;exercises#feed&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -5182,10 +5194,10 @@
         <div class="source_table" id="d730cfa9e9c86b22e463ad2a60316f73007d618f">
   <div class="header">
     <h3>spec/selenium_spec.rb</h3>
-    <h4><span class="yellow">80.52 %</span> covered</h4>
+    <h4><span class="red">79.45 %</span> covered</h4>
     <div>
-      <b>77</b> relevant lines. 
-      <span class="green"><b>62</b> lines covered</span> and
+      <b>73</b> relevant lines. 
+      <span class="green"><b>58</b> lines covered</span> and
       <span class="red"><b>15</b> lines missed.</span>
     </div>
   </div>
@@ -5553,235 +5565,211 @@
           <code class="ruby">    @driver.get &quot;http://localhost:3000/feed&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="61">
           
-          <code class="ruby">    @driver.find_element(:xpath, &quot;(.//*[normalize-space(text()) and normalize-space(.)=&#39;Show me&#39;])[1]/following::button[1]&quot;).click</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">    @driver.find_element(:xpath, &quot;(.//*[normalize-space(text()) and normalize-space(.)=&#39;vadim&#39;])[1]/following::button[1]&quot;).click</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">    @driver.get &quot;http://localhost:3000/saves&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="64">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @driver.find_element(:link, &quot;Show me&quot;).click</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="65">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="66">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="67">
-          <span class="hits">1</span>
-          
           <code class="ruby">  def element_present?(how, what)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
           <code class="ruby">    @driver.find_element(how, what)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="69">
+        <li class="missed" data-hits="0" data-linenumber="65">
           
           
           <code class="ruby">    true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="66">
           
           
           <code class="ruby">  rescue Selenium::WebDriver::Error::NoSuchElementError</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="71">
+        <li class="missed" data-hits="0" data-linenumber="67">
           
           
           <code class="ruby">    false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="72">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
           <code class="ruby">  def alert_present?()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="75">
+        <li class="missed" data-hits="0" data-linenumber="71">
           
           
           <code class="ruby">    @driver.switch_to.alert</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="76">
+        <li class="missed" data-hits="0" data-linenumber="72">
           
           
           <code class="ruby">    true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="73">
           
           
           <code class="ruby">  rescue Selenium::WebDriver::Error::NoAlertPresentError</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="78">
+        <li class="missed" data-hits="0" data-linenumber="74">
           
           
           <code class="ruby">    false</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="79">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
           <code class="ruby">  def verify(&amp;blk)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="82">
+        <li class="missed" data-hits="0" data-linenumber="78">
           
           
           <code class="ruby">    yield</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">  rescue ExpectationNotMetError =&gt; ex</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="84">
+        <li class="missed" data-hits="0" data-linenumber="80">
           
           
           <code class="ruby">    @verification_errors &lt;&lt; ex</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="82">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="83">
           <span class="hits">1</span>
           
           <code class="ruby">  def close_alert_and_get_its_text(how, what)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="88">
+        <li class="missed" data-hits="0" data-linenumber="84">
           
           
           <code class="ruby">    alert = @driver.switch_to().alert()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
+        <li class="missed" data-hits="0" data-linenumber="85">
           
           
           <code class="ruby">    alert_text = alert.text</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="90">
+        <li class="missed" data-hits="0" data-linenumber="86">
           
           
           <code class="ruby">    if (@accept_next_alert) then</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="91">
+        <li class="missed" data-hits="0" data-linenumber="87">
           
           
           <code class="ruby">      alert.accept()</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="89">
           
           
           <code class="ruby">      alert.dismiss()</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="95">
+        <li class="missed" data-hits="0" data-linenumber="91">
           
           
           <code class="ruby">    alert_text</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="96">
+        <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby">  ensure</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="97">
+        <li class="missed" data-hits="0" data-linenumber="93">
           
           
           <code class="ruby">    @accept_next_alert = true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="95">
           
           
           <code class="ruby">end</code>

@@ -1,31 +1,30 @@
-<h2>Sign up</h2>
+<h2><%= t :Register %></h2>
 
 <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.text_field :username, autofocus: true, autocomplete: "user name" %>
+
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", label: t(:Email) %>
   </div>
 
   <div class="field">
-    <%= f.email_field :email, autocomplete: "email" %>
+    <%= f.text_field :username, autocomplete: "name", label: t(:NickName) %>
   </div>
 
   <div class="field">
-    <% passwd_label = 'Password' %>
     <% if @minimum_password_length %>
-      <% passwd_label << " (#{@minimum_password_length} characters minimum)" %>
-    <% end %>
-    <%= f.password_field :password, autocomplete: "new-password", label: passwd_label %>
+      <em><%= t(:Pls_use) %> <%= @minimum_password_length %> <%= t(:Symb) %></em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", label: "Password", label: t(:Password_L) %>
   </div>
 
   <div class="field">
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", label: t(:Password_confirmation) %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t(:Register) %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>

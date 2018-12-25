@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'users/:id/exercises', to: 'users#exercises'
   get 'user_saves', to: 'users#saves', as: 'user_saves'
   get 'feed', to: 'exercises#feed'
+  get 'top', to: 'exercises#top'
+  get 'index_top', to: 'exercises#index_top'
   get 'saves', to: 'exercises#saves', as: 'saves'
   root 'exercises#feed'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

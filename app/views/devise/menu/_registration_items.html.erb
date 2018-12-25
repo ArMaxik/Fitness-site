@@ -1,6 +1,16 @@
 <% if user_signed_in? %>
 <% else %>
   <li class="nav-item">
-    <%= link_to 'Register', new_user_registration_path, class: "nav-link"  %>
+    <%= link_to t(:Register), new_user_registration_path, class: "nav-link"  %>
+  </li>
+  <li class="nav-item">
+    <a href="<%= current_path(locale: 'ru') %>" class="flag">
+      <%= image_tag 'ru.jpg', size: '54x36' %>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a href="<%= current_path(locale: 'en') %>" class="flag">
+      <%= image_tag 'en.jpg', size: '54x36' %>
+    </a>
   </li>
 <% end %>

@@ -58,10 +58,6 @@ describe "UntitledTestCase" do
     @driver.find_element(:name, "commit").click
     (@driver.find_element(:xpath, "(.//*[normalize-space(text()) and normalize-space(.)='hello'])[1]/following::h1[1]").text).should == "Total comments: 1"
     @driver.get "http://localhost:3000/feed"
-    @driver.find_element(:xpath, "(.//*[normalize-space(text()) and normalize-space(.)='Show me'])[1]/following::button[1]").click
-    @driver.find_element(:xpath, "(.//*[normalize-space(text()) and normalize-space(.)='vadim'])[1]/following::button[1]").click
-    @driver.get "http://localhost:3000/saves"
-    @driver.find_element(:link, "Show me").click
   end
 
   def element_present?(how, what)

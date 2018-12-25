@@ -10,6 +10,10 @@ class ExercisesController < ApplicationController
     @exercises = Exercise.all
   end
 
+  def index_top
+    @exercises = Exercise.all.order(rating: :desc)
+  end
+
   # GET /exercises/1
   # GET /exercises/1.json
   def show
@@ -25,7 +29,6 @@ class ExercisesController < ApplicationController
   end
 
   def saves
-
   end
 
   def change_rating
@@ -48,6 +51,9 @@ class ExercisesController < ApplicationController
   end
 
   def feed
+  end
+
+  def top
   end
 
   # POST /exercises
