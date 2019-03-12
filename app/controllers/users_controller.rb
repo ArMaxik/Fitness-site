@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_user, only: [:show, :exercises]
-  def show
-  end
+  before_action :set_user, only: %i[show exercises]
+  def show; end
 
   def exercises
     @exercises = @user.exercises
@@ -23,7 +24,7 @@ class UsersController < ApplicationController
       translate = t(:Saved)
     end
     respond_to do |format|
-      format.json { render json: {state: state, translate: translate} }
+      format.json { render json: { state: state, translate: translate } }
     end
   end
 
@@ -33,5 +34,4 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
-
 end

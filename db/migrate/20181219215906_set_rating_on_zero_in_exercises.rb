@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SetRatingOnZeroInExercises < ActiveRecord::Migration[5.2]
   def change
     Exercise.update_all rating: 0

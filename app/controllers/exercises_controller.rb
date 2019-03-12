@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class ExercisesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_exercise, only: [:show, :edit, :update, :destroy]
-  skip_before_action :verify_authenticity_token, :only => [:change_rating]
+  before_action :set_exercise, only: %i[show edit update destroy]
+  skip_before_action :verify_authenticity_token, only: [:change_rating]
   # TODO: add faded alerts
 
   # GET /exercises
@@ -16,8 +18,7 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/1
   # GET /exercises/1.json
-  def show
-  end
+  def show; end
 
   # GET /exercises/new
   def new
@@ -25,21 +26,19 @@ class ExercisesController < ApplicationController
   end
 
   # GET /exercises/1/edit
-  def edit
-  end
+  def edit; end
 
-  def saves
-  end
+  def saves; end
 
   def change_rating
     exer = Exercise.find_by(id: params[:exercise_id])
-    unless record = VoteTable.find_by(user_id:current_user.id, exercise_id: params[:exercise_id])
-      record = VoteTable.create({user_id:current_user.id, exercise_id: params[:exercise_id]})
+    unless record = VoteTable.find_by(user_id: current_user.id, exercise_id: params[:exercise_id])
+      record = VoteTable.create(user_id: current_user.id, exercise_id: params[:exercise_id])
     end
-    if record.vote < 1 and params[:change] == 'up'
+    if (record.vote < 1) && (params[:change] == 'up')
       exer.rating += 1
       record.vote += 1
-    elsif record.vote > -1 and params[:change] == 'down'
+    elsif (record.vote > -1) && (params[:change] == 'down')
       exer.rating -= 1
       record.vote -= 1
     end
@@ -50,11 +49,9 @@ class ExercisesController < ApplicationController
     end
   end
 
-  def feed
-  end
+  def feed; end
 
-  def top
-  end
+  def top; end
 
   # POST /exercises
   # POST /exercises.json
@@ -99,13 +96,14 @@ class ExercisesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exercise
-      @exercise = Exercise.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def exercise_params
-      params.require(:exercise).permit(:title, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exercise
+    @exercise = Exercise.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def exercise_params
+    params.require(:exercise).permit(:title, :description)
+  end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Exercise < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
@@ -5,6 +7,6 @@ class Exercise < ApplicationRecord
   belongs_to :user
 
   has_and_belongs_to_many :users_save, class_name: 'User'
-  #has_many :saves
-  #has_many :users, through:  :saves
+  # has_many :saves
+  # has_many :users, through:  :saves
 end

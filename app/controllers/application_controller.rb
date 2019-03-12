@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
@@ -9,9 +11,9 @@ class ApplicationController < ActionController::Base
     session[:locale] = I18n.locale
   end
 
-  #def default_url_options
+  # def default_url_options
   #  { locale: I18n.locale }
-  #end
+  # end
   #
 
   def configure_permitted_parameters

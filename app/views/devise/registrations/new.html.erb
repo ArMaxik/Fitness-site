@@ -16,7 +16,7 @@
     <% if @minimum_password_length %>
       <em><%= t(:Pls_use) %> <%= @minimum_password_length %> <%= t(:Symb) %></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", label: "Password", label: t(:Password_L) %>
+    <%= f.password_field :password, autocomplete: "new-password", label: t(:Password_L) %>
   </div>
 
   <div class="field">

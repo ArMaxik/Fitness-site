@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Exercise, type: :model do
@@ -15,17 +17,17 @@ RSpec.describe Exercise, type: :model do
   end
 
   it 'ensures title presence' do
-    exer =  Exercise.new(description: 'qwerty', user_id: 2)
+    exer = Exercise.new(description: 'qwerty', user_id: 2)
     expect(exer.save).to eq(false)
   end
 
   it 'ensures description presence' do
-    exer =  Exercise.new(title: 'hello', user_id: 2)
+    exer = Exercise.new(title: 'hello', user_id: 2)
     expect(exer.save).to eq(false)
   end
 
   it 'ensures user_id presence' do
-    exer =  Exercise.new(title: 'hello', description: 'qwerty')
+    exer = Exercise.new(title: 'hello', description: 'qwerty')
     expect(exer.save).to eq(false)
   end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -8,6 +10,6 @@ class User < ApplicationRecord
   has_many :comments
 
   has_and_belongs_to_many :exercises_save, class_name: 'Exercise'
-  #has_many :saves
-  #has_many :exercises, through: :save
+  # has_many :saves
+  # has_many :exercises, through: :save
 end

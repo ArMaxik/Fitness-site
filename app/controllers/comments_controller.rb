@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 
@@ -10,6 +12,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   # Never trust parameters from the scary internet, only allow the white list through.
   def exercise_params
     params.require(:comment).permit(:name, :comment)
